@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Socket.IO Game Example</title>
+    <title>Socket.IO Chat Example</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script defer type="text/javascript" src="app.js"></script>
   </head>
   <body>
     <main>
@@ -18,11 +20,5 @@
         <input type="submit" id="send" class="btn" value="Send" />
       </form>
     </main>
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    ></script>
-    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-    <script defer type="text/javascript" src="app.js"></script>
   </body>
 </html>

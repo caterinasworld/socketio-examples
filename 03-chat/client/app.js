@@ -5,7 +5,7 @@ const chat = document.querySelector('.chat');
 socket.on('message', (data) => {
   let username = document.createElement('span');
   username.classList.add('username');
-  username.textContent = `${data.socketId.toUpperCase()}: `;
+  username.textContent = `${data.socket.toUpperCase()}: `;
 
   let message = document.createElement('span');
   message.textContent = data.message;
@@ -17,17 +17,17 @@ socket.on('message', (data) => {
 });
 
 socket.on('welcome', (data) => {
+  let { welcome, socket } = data;
+
+  socket = socket.substr(0, 4).toUpperCase();
+
   let message = document.createElement('div');
-  message.textContent = `${data.welcome}, ${
-    data.socketId
-  }! We'll use the shorthand ${data.socketId
-    .substr(0, 4)
-    .toUpperCase()} for you.`;
+  message.textContent = `${welcome}, ${socket}! We'll use the shorthand ${socket} for you.`;
 
   chat.append(message);
 });
 
-document.querySelector('#send').addEventListener('click', (event) => {
+document.querySelector('form').addEventListener('submit', (event) => {
   event.preventDefault();
 
   let message = document.querySelector('#message');

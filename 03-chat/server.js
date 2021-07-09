@@ -4,27 +4,27 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const port = 5000;
 
-app.use(express.static(__dirname + '/public/'));
+app.use(express.static(__dirname + '/client/'));
 
 io.on('connection', (socket) => {
-  console.log('client connected');
+  console.log(`client with socket id ${socket.id} connected`);
 
   socket.emit('welcome', {
     welcome: 'Welcome to the chat',
-    socketId: socket.id,
+    socket: socket.id,
   });
 
   socket.on('message', (data) => {
     console.log(data);
 
     io.emit('message', {
-      socketId: socket.id.substr(0, 4),
+      socket: socket.id.substr(0, 4),
       message: data,
     });
   });
 
   socket.on('disconnect', () => {
-    console.log('client disconnected');
+    console.log(`client with socket id ${socket.id} disconnected`);
   });
 });
 

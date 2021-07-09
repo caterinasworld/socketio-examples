@@ -1,13 +1,18 @@
 * {
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
   --teal: #008080;
+  --white: #fbfbfb;
+  --black: #0a0a0a;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+.chat {
+  min-height: 40vh;
+  max-height: 66vh;
+  overflow: scroll;
 }
 
 .chat > * {
@@ -31,7 +36,7 @@ body {
 }
 
 .submission > input {
-  border: 1px solid black;
+  border: 1px solid var(--black);
   padding: 0.5rem;
   font-size: 1.2rem;
 }
@@ -40,6 +45,6 @@ body {
   margin-top: 10px;
   border-color: var(--teal);
   background-color: var(--teal);
-  color: white;
+  color: var(--white);
   font-size: 1.2rem;
 }

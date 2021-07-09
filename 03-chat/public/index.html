@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Socket.IO Game Example</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>03 - Chat</h1>
+      <section class="chat">
+        <h2>Chat History</h2>
+      </section>
+      <form class="submission">
+        <label for="message">Enter your message below </label>
+        <input type="text" id="message" />
+        <input type="submit" id="send" class="btn" value="Send" />
+      </form>
+    </main>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script defer type="text/javascript" src="app.js"></script>
+  </body>
+</html>

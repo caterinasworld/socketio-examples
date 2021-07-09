@@ -1,0 +1,17 @@
+:root {
+  --teal: #008080;
+}
+
+.circle {
+  cursor: pointer;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+#item {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  background-color: var(--teal);
+}

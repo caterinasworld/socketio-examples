@@ -3,8 +3,8 @@
 To use the code in the repo:
 1. Clone the repo
 2. Run `npm install` to install all dependencies
-3. Navigate into one of the folders and run `node server.js` or `nodemon server.js`. 
-4. The application will run on `localhost:5000`.
+3. Navigate into one of the folders and run `node server.js` or `nodemon server.js`
+4. The application will run on `localhost:5000`
 
 ### 01 - Hello
 

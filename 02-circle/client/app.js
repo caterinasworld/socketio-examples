@@ -23,7 +23,7 @@ document.addEventListener('mouseup', (event) => {
   active = false;
 });
 
-socket.on('drag', (data) => {
+socket.on('update', (data) => {
   let circle = document.querySelector('#item');
 
   circle.style.left = `${data.left}px`;

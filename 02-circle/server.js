@@ -16,7 +16,7 @@ io.on('connection', (socket) => {
     assert(data.left !== undefined);
     assert(data.top !== undefined);
 
-    io.emit('drag', data);
+    io.emit('update', data);
   });
 
   socket.on('disconnect', () => {

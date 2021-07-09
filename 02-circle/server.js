@@ -5,10 +5,10 @@ const io = require('socket.io')(server);
 const assert = require('assert');
 const port = 5000;
 
-app.use(express.static(__dirname + '/public/'));
+app.use(express.static(__dirname + '/client/'));
 
 io.on('connection', (socket) => {
-  console.log('client connected');
+  console.log(`client with socket id ${socket.id} connected`);
 
   socket.on('drag', (data) => {
     // console.log(data);
@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('disconnect', () => {
-    console.log('client disconnected');
+    console.log(`client with socket id ${socket.id} disconnected`);
   });
 });
 

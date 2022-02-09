@@ -1,4 +1,4 @@
-const socket = io('http://localhost:5000');
+const socket = io('http://localhost:5001');
 
 const chat = document.querySelector('.chat');
 

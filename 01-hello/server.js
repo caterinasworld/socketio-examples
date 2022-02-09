@@ -1,7 +1,7 @@
 const app = require('express')();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
-const port = 5000;
+const port = 5001;
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');

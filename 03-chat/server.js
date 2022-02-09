@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
-const port = 5000;
+const port = 5001;
 
 app.use(express.static(__dirname + '/client/'));
 
